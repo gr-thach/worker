@@ -1,0 +1,275 @@
+{
+  "Insecure Authentication": [
+    {
+      "idFinding": "020627e8-46e3-4d87-826e-647b2c9e4a28",
+      "path": "bower.json",
+      "lineNumber": 18,
+      "language": "javascript",
+      "metadata": {
+        "cve": { "ids": ["CVE-2019-11358"] },
+        "severity": "medium",
+        "references": ["https://blog.jquery.com/2020/04/10/jquery-3-5-0-released/"],
+        "description": "Regex in its jQuery.htmlPrefilter  sometimes may introduce XSS",
+        "currentVersion": "1.8.1",
+        "dependencyName": "jquery",
+        "patchedVersions": ">3.5.0",
+        "vulnerableVersions": "<3.5.0"
+      },
+      "fkRule": 7,
+      "rule": {
+        "name": "GR0013",
+        "title": "Insecure Authentication",
+        "docs": "insecure_authentication.html"
+      },
+      "vulnerability": {
+        "idVulnerability": "c907619b-6d2c-40e3-aeab-11f27ed64bb8",
+        "createdAt": "2020-04-16T12:48:04.206+00:00",
+        "fixedAt": null
+      }
+    },
+    {
+      "idFinding": "3b5b4a6d-3209-4091-9277-9cc7261f412f",
+      "path": "other-dir/package.json",
+      "lineNumber": null,
+      "language": "javascript",
+      "metadata": {
+        "cve": { "ids": ["CVE-2015-7565"] },
+        "severity": "medium",
+        "references": ["https://groups.google.com/forum/#!topic/ember-security/OfyQkoSuppY"],
+        "currentVersion": "1.8.0",
+        "dependencyName": "ember",
+        "patchedVersions": ">1.11.4",
+        "vulnerableVersions": ">=1.8.0 <1.11.4"
+      },
+      "fkRule": 7,
+      "rule": {
+        "name": "GR0013",
+        "title": "Insecure Authentication",
+        "docs": "insecure_authentication.html"
+      },
+      "vulnerability": {
+        "idVulnerability": "c0bfd457-96b3-4c19-a02a-5ddbc1010df9",
+        "createdAt": "2020-04-12T03:54:04.823+00:00",
+        "fixedAt": null
+      }
+    }
+  ],
+  "Insecure Use of Dangerous Function": [
+    {
+      "idFinding": "2c8ab35e-8912-48a2-b5a5-0a8a62063284",
+      "path": "src/GR0009.js",
+      "lineNumber": 5,
+      "language": "javascript",
+      "metadata": {
+        "description": "[GR:0008:stable] eval with argument of type: Identifier",
+        "lineContent": "eval(code);"
+      },
+      "fkRule": 6,
+      "rule": {
+        "name": "GR0002",
+        "title": "Insecure Use of Dangerous Function",
+        "docs": "insecure_use_of_dangerous_function.html"
+      },
+      "vulnerability": {
+        "idVulnerability": "e3003c42-a9d2-4689-abae-5b576dc2d9ed",
+        "createdAt": "2020-04-12T03:54:03.354+00:00",
+        "fixedAt": null
+      }
+    },
+    {
+      "idFinding": "af77ea45-92d5-44b5-a77a-77511f8bb149",
+      "path": "src/GR0008.js",
+      "lineNumber": 9,
+      "language": "javascript",
+      "metadata": {
+        "description": "[GR:0008:stable] eval with argument of type: MemberExpression",
+        "lineContent": "eval(req.body.evil);"
+      },
+      "fkRule": 6,
+      "rule": {
+        "name": "GR0002",
+        "title": "Insecure Use of Dangerous Function",
+        "docs": "insecure_use_of_dangerous_function.html"
+      },
+      "vulnerability": {
+        "idVulnerability": "d6b123a3-7c2f-448d-9264-03f22fc9c83d",
+        "createdAt": "2020-04-12T03:54:03.357+00:00",
+        "fixedAt": null
+      }
+    },
+    {
+      "idFinding": "bbe23b37-40a0-4710-b155-7c4f12b90a04",
+      "path": "src/GR0008.js",
+      "lineNumber": 5,
+      "language": "javascript",
+      "metadata": {
+        "description": "[GR:0009:stable] Found child_process.exec() with non Literal first argument.",
+        "lineContent": "child.exec(com);"
+      },
+      "fkRule": 6,
+      "rule": {
+        "name": "GR0002",
+        "title": "Insecure Use of Dangerous Function",
+        "docs": "insecure_use_of_dangerous_function.html"
+      },
+      "vulnerability": {
+        "idVulnerability": "1e6895cd-bfea-4509-af8d-1ad895037fff",
+        "createdAt": "2020-04-12T03:54:03.36+00:00",
+        "fixedAt": null
+      }
+    }
+  ],
+  "Insecure Use of SQL Queries": [
+    {
+      "idFinding": "379eec56-ed3a-42d1-affa-bc6428635f87",
+      "path": "src/GR0007.js",
+      "lineNumber": 11,
+      "language": "javascript",
+      "metadata": {
+        "description": "[GR:0007:alpha] simple string based SQL injection detected",
+        "lineContent": "var query = %27SELECT * from user where id=%27 + req.body.login + %27;%27;"
+      },
+      "fkRule": 5,
+      "rule": {
+        "name": "GR0001",
+        "title": "Insecure Use of SQL Queries",
+        "docs": "insecure_use_of_sql_queries.html"
+      },
+      "vulnerability": {
+        "idVulnerability": "6723c50b-e064-4c42-9e28-2b27f8b629b8",
+        "createdAt": "2020-04-12T03:54:03.352+00:00",
+        "fixedAt": null
+      }
+    }
+  ],
+  "Insecure Use of Regular Expressions": [
+    {
+      "idFinding": "718c53d4-075c-4c1c-89d4-d27c07ef91a4",
+      "path": "src/GR0002.js",
+      "lineNumber": 8,
+      "language": "javascript",
+      "metadata": {
+        "description": "[GR:0001:stable] Unsafe Regular Expression",
+        "lineContent": "var unsafeRegex = /(x+x+)+y/;"
+      },
+      "fkRule": 2,
+      "rule": {
+        "name": "GR0003",
+        "title": "Insecure Use of Regular Expressions",
+        "docs": "insecure_use_of_regular_expressions.html"
+      },
+      "vulnerability": {
+        "idVulnerability": "d3d3a9b4-d1dc-466a-b648-be13ddf63475",
+        "createdAt": "2020-04-12T03:54:03.336+00:00",
+        "fixedAt": null
+      }
+    },
+    {
+      "idFinding": "82aa0115-7b60-4a7c-9db2-1d83c5f4a108",
+      "path": "src/GR0001.js",
+      "lineNumber": 8,
+      "language": "javascript",
+      "metadata": {
+        "description": "[GR:0002:stable] Unsafe Regular Expression (new RegExp)",
+        "lineContent": "var newUnsafeRegex = new RegExp(%27(x+x+)+y%27);"
+      },
+      "fkRule": 2,
+      "rule": {
+        "name": "GR0003",
+        "title": "Insecure Use of Regular Expressions",
+        "docs": "insecure_use_of_regular_expressions.html"
+      },
+      "vulnerability": {
+        "idVulnerability": "811c17fc-f43f-4c86-84ac-f0c7a000be3e",
+        "createdAt": "2020-04-12T03:54:03.336+00:00",
+        "fixedAt": null
+      }
+    },
+    {
+      "idFinding": "8968393b-1827-4532-9c2b-3b6f45c64e21",
+      "path": "src/ignore.js",
+      "lineNumber": 8,
+      "language": "javascript",
+      "metadata": {
+        "description": "[GR:0001:stable] Unsafe Regular Expression",
+        "lineContent": "var unsafeRegex = /(x+x+)+y/;"
+      },
+      "fkRule": 2,
+      "rule": {
+        "name": "GR0003",
+        "title": "Insecure Use of Regular Expressions",
+        "docs": "insecure_use_of_regular_expressions.html"
+      },
+      "vulnerability": {
+        "idVulnerability": "d6e166d5-7521-4f0e-9ab8-6ce8f0f22f82",
+        "createdAt": "2020-04-12T03:54:03.361+00:00",
+        "fixedAt": null
+      }
+    }
+  ],
+  "Insecure Use of Language/Framework API": [
+    {
+      "idFinding": "32926c14-ae46-4562-a010-5b788f0e95bd",
+      "path": "src/GR0006.js",
+      "lineNumber": 7,
+      "language": "javascript",
+      "metadata": {
+        "description": "[GR:0006:stable] Found usage of deprecated `new Buffer()`",
+        "lineContent": "var a = new Buffer([1, 2, 3])"
+      },
+      "fkRule": 4,
+      "rule": {
+        "name": "GR0010",
+        "title": "Insecure Use of Language/Framework API",
+        "docs": "insecure_use_of_language_framework_api.html"
+      },
+      "vulnerability": {
+        "idVulnerability": "ced41477-b0cd-4be5-9713-542eed960400",
+        "createdAt": "2020-04-12T03:54:03.34+00:00",
+        "fixedAt": null
+      }
+    },
+    {
+      "idFinding": "8435c9d2-066f-4171-8ba4-48a7aa7d47cd",
+      "path": "src/GR0005.js",
+      "lineNumber": 7,
+      "language": "javascript",
+      "metadata": {
+        "description": "[GR:0005:stable] Found Buffer.readUInt8 with noAssert flag set true",
+        "lineContent": "a.readUInt8(0, true)"
+      },
+      "fkRule": 4,
+      "rule": {
+        "name": "GR0010",
+        "title": "Insecure Use of Language/Framework API",
+        "docs": "insecure_use_of_language_framework_api.html"
+      },
+      "vulnerability": {
+        "idVulnerability": "d2d06f6f-6c56-456c-a1ef-3460db149f26",
+        "createdAt": "2020-04-12T03:54:03.336+00:00",
+        "fixedAt": null
+      }
+    },
+    {
+      "idFinding": "94d1810a-8742-45df-9c6d-98fe6bbcaeb7",
+      "path": "src/GR0006.js",
+      "lineNumber": 14,
+      "language": "javascript",
+      "metadata": {
+        "description": "[GR:0006:stable] Found usage of deprecated `new Buffer()`",
+        "lineContent": "var a = new Buffer(%27test%27)"
+      },
+      "fkRule": 4,
+      "rule": {
+        "name": "GR0010",
+        "title": "Insecure Use of Language/Framework API",
+        "docs": "insecure_use_of_language_framework_api.html"
+      },
+      "vulnerability": {
+        "idVulnerability": "33ebb276-fd50-415c-baf6-54eae4a20459",
+        "createdAt": "2020-04-12T03:54:03.337+00:00",
+        "fixedAt": null
+      }
+    }
+  ]
+}

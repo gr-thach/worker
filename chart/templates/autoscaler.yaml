@@ -1,0 +1,25 @@
+apiVersion: autoscaling/v2beta2
+kind: HorizontalPodAutoscaler
+metadata:
+  name: {{ include "worker.fullname" . }}
+  labels: {{- include "worker.labels" . | nindent 4 }}
+spec:
+  scaleTargetRef:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: {{ include "worker.fullname" . }}
+  minReplicas: {{ .Values.autoscaler.minReplicas }}
+  maxReplicas: {{ .Values.autoscaler.maxReplicas }}
+  metrics:
+    - type: External
+      external:
+        metric:
+          name: rabbitmq_messages_waiting_per_consumer
+        target:
+          type: Value
+          value: {{ .Values.autoscaler.targetValue }}
+  {{- if .Values.autoscaler.behavior }}
+  {{- with .Values.autoscaler.behavior }}
+  behavior: {{- toYaml . | nindent 4 }}
+  {{- end }}
+  {{- end }}

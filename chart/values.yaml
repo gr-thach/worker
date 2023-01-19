@@ -1,0 +1,108 @@
+# Default values for worker.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+replicaCount: 1
+
+image:
+  repository: guardrails/worker
+  tag: latest
+  pullPolicy: Always
+
+imagePullSecrets:
+  - name: docker-regcred
+nameOverride: ''
+fullnameOverride: ''
+
+serviceAccount:
+  # Specifies whether a service account should be created
+  create: true
+  # Annotations to add to the service account
+  annotations: {}
+  # The name of the service account to use.
+  # If not set and create is true, a name is generated using the fullname template
+  name:
+
+podSecurityContext:
+  {}
+  # fsGroup: 2000
+
+securityContext:
+  {}
+  # capabilities:
+  #   drop:
+  #   - ALL
+  # readOnlyRootFilesystem: true
+  # runAsNonRoot: true
+  # runAsUser: 1000
+
+service:
+  type: ClusterIP
+  port: 3000
+
+ingress:
+  enabled: false
+  annotations:
+    {}
+    # kubernetes.io/ingress.class: nginx
+    # kubernetes.io/tls-acme: "true"
+  hosts:
+    - host: worker.local
+      paths: []
+  tls: []
+  #  - secretName: worker-tls
+  #    hosts:
+  #      - worker.local
+
+resources:
+  # We usually recommend not to specify default resources and to leave this as a conscious
+  # choice for the user. This also increases chances charts run on environments with little
+  # resources, such as Minikube. If you do want to specify resources, uncomment the following
+  # lines, adjust them as necessary, and remove the curly braces after 'resources:'.
+  # limits:
+  #   cpu: 1000m
+  #   memory: 500Mi
+  requests:
+    cpu: 250m
+    memory: 512Mi
+  limits:
+    cpu: "2"
+    memory: 2Gi
+
+env:
+  # Additional environment variables
+  # Used to override or add the basic environment variables described in the external configmap
+  - name: SENTRY_DSN
+    value: 'https://778db3e928d6479197dfbc2d37f1b56e@sentry.io/1190080'
+  - name: NEW_RELIC_APP_NAME
+    value: 'worker-staging'
+  - name: NEW_RELIC_ENABLED
+    value: 'true'
+
+nodeSelector:
+  node-name: 'worker'
+  node-os: 'linux'
+
+tolerations: []
+
+affinity:
+  podAntiAffinity:
+    requiredDuringSchedulingIgnoredDuringExecution:
+      - labelSelector:
+          matchExpressions:
+            - key: app.kubernetes.io/name
+              operator: In
+              values:
+                - worker
+        topologyKey: 'kubernetes.io/hostname'
+
+autoscaler:
+  minReplicas: 1
+  maxReplicas: 2
+  targetValue: 1.5
+  behavior:
+    scaleDown:
+      policies:
+        - type: Pods
+          value: 1
+          periodSeconds: 180

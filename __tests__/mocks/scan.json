@@ -1,0 +1,28 @@
+{
+  "idScan": "cc0bd507-45a0-4f72-832b-e0be638d19af",
+  "sha": "fa2ee993deb8662679bfa4022edc1999d0641e91",
+  "hasComment": true,
+  "commentId": 612560253,
+  "prNumber": 253,
+  "githookMetadata": {
+    "sender": {
+      "login": "yamfrich"
+    },
+    "pullRequest": {
+      "before": "before-sha"
+    }
+  },
+  "type": "PULL",
+  "repository": {
+    "idRepository": 132,
+    "name": "test-js",
+    "account": {
+      "idAccount": 28,
+      "login": "yamilfrich",
+      "provider": "GITHUB",
+      "providerInternalId": "55311883",
+      "installationId": 6878210
+    }
+  },
+  "branch": "master"
+}

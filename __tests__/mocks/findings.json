@@ -1,0 +1,74 @@
+[
+  {
+    "idFinding": "020627e8-46e3-4d87-826e-647b2c999990",
+    "path": "bower.json",
+    "lineNumber": 18,
+    "fkRepository": 99,
+    "branchName": "master",
+    "fkSeverity": 1,
+    "score": 50,
+    "status": "vulnerability",
+    "type": "type",
+    "language": "javascript",
+    "metadata": {
+      "cve": { "ids": ["CVE-2019-11358"] },
+      "severity": "medium",
+      "references": ["https://blog.jquery.com/2020/04/10/jquery-3-5-0-released/"],
+      "description": "Regex in its jQuery.htmlPrefilter  sometimes may introduce XSS",
+      "currentVersion": "1.8.1",
+      "dependencyName": "jquery",
+      "patchedVersions": ">3.5.0",
+      "vulnerableVersions": "<3.5.0"
+    },
+    "fkRule": 7,
+    "fkEngineRule": 1
+  },
+  {
+    "idFinding": "020627e8-46e3-4d87-826e-647b2c999991",
+    "path": "somefile.js",
+    "lineNumber": 28,
+    "fkRepository": 90,
+    "branchName": "feature_test",
+    "fkSeverity": 4,
+    "score": 54,
+    "status": "false_positive",
+    "type": "type",
+    "language": "javascript",
+    "metadata": {
+      "cve": { "ids": ["CVE-2019-11358"] },
+      "severity": "medium",
+      "references": ["https://blog.jquery.com/2020/04/10/jquery-3-5-0-released/"],
+      "description": "Regex in its jQuery.htmlPrefilter  sometimes may introduce XSS",
+      "currentVersion": "1.8.1",
+      "dependencyName": "jquery",
+      "patchedVersions": ">3.5.0",
+      "vulnerableVersions": "<3.5.0"
+    },
+    "fkRule": 1,
+    "fkEngineRule": 2
+  },
+  {
+    "idFinding": "020627e8-46e3-4d87-826e-647b2c999992",
+    "path": "sec/random/file.js",
+    "lineNumber": 38,
+    "fkRepository": 109,
+    "branchName": "develop",
+    "fkSeverity": 3,
+    "score": 50,
+    "status": "mark_as_vulnerability",
+    "type": "type",
+    "language": "javascript",
+    "metadata": {
+      "cve": { "ids": ["CVE-2019-11358"] },
+      "severity": "medium",
+      "references": ["https://blog.jquery.com/2020/04/10/jquery-3-5-0-released/"],
+      "description": "Regex in its jQuery.htmlPrefilter  sometimes may introduce XSS",
+      "currentVersion": "1.8.1",
+      "dependencyName": "jquery",
+      "patchedVersions": ">3.5.0",
+      "vulnerableVersions": "<3.5.0"
+    },
+    "fkRule": 3,
+    "fkEngineRule": 4
+  }
+]

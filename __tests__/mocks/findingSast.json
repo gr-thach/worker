@@ -1,0 +1,7 @@
+{
+  "path": "src/main/java/com/gitlab/soshibby/vulnerableapp/controllers/UnsafeRegexController.java",
+  "lineNumber": 29,
+  "lineContent": "boolean isValidMailAddress = Pattern.compile(pattern)",
+  "fkRule": 2,
+  "metadata": {}
+}

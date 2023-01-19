@@ -1,0 +1,12 @@
+const filterReasonFlag = {
+  MATCH_ENGINE_FILTER_OUT: 1,
+  NOT_IN_PR_DIFFS: 2,
+  MATCH_IGNORE_FILE: 4,
+  DISABLED_LINE: 8,
+  DISABLED_RULE: 16,
+  IS_DUPLICATED: 32,
+  IS_USER_ACTION_SET: 64,
+  USER_ACTION_FALSE_POSITIVE: 128
+};
+
+module.exports = filterReasonFlag;

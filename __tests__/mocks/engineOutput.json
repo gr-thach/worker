@@ -1,0 +1,321 @@
+{
+  "engine": {
+    "name": "@guardrails/guardrails-engine-javascript-npm-audit",
+    "version": "1.0.1"
+  },
+  "process": {
+    "name": "npm-audit",
+    "version": "6.14.2"
+  },
+  "language": "javascript",
+  "status": "success",
+  "executionTime": 5863,
+  "issues": 30,
+  "output": [
+    {
+      "ruleId": "JSNPM0001",
+      "type": "sca",
+      "location": {
+        "path": "other-dir/package.json",
+        "positions": {
+          "begin": {
+            "line": 17
+          }
+        }
+      },
+      "metadata": {
+        "cve": {
+          "ids": []
+        },
+        "cwe": "CWE-601",
+        "npmauditId": 830,
+        "title": "Open Redirect",
+        "vulnerableVersions": "<2.2.2 || >=3.0.0 <3.3.2 || >=4.0.0 <4.1.2",
+        "patchedVersions": ">=2.2.2 <3.0.0 || >=3.3.2 <4.0.0 || >=4.1.2",
+        "currentVersion": "1.3.1",
+        "references": [],
+        "severity": "high",
+        "solution": "If using `ecstatic` 4.x, upgrade to 4.1.2 or later.\nIf using `ecstatic` 3.x, upgrade to 3.3.2 or later.\nIf using `ecstatic` 2.x, upgrade to 2.2.2 or later.",
+        "dependencyName": "ecstatic"
+      }
+    },
+    {
+      "ruleId": "JSNPM0001",
+      "type": "sca",
+      "location": {
+        "path": "other-dir/package.json",
+        "positions": {
+          "begin": {
+            "line": 14
+          }
+        }
+      },
+      "metadata": {
+        "cve": {
+          "ids": ["CVE-2017-16116"]
+        },
+        "cwe": "CWE-400",
+        "npmauditId": 536,
+        "title": "Regular Expression Denial of Service",
+        "vulnerableVersions": ">=0.0.0",
+        "patchedVersions": "<0.0.0",
+        "currentVersion": "3.3.3",
+        "references": ["- [Issue #212](https://github.com/jprichardson/string.js/issues/212)"],
+        "severity": "high",
+        "solution": "There is currently no direct patch for this vulnerability. \n\nCurrently, the best solution is to avoid passing user input to the `underscore` and `unescapeHTML` methods.\n\nAlternatively, a user provided patch is available in [Pull Request #217]( https://github.com/jprichardson/string.js/pull/217/commits/eab9511e4efbc8c521e18b6cf2e8565ae50c5a16), however this patch has not been tested, nor has it been merged by the package author.",
+        "dependencyName": "string"
+      }
+    },
+    {
+      "ruleId": "JSNPM0001",
+      "type": "sca",
+      "location": {
+        "path": "other-dir/package.json",
+        "positions": {
+          "begin": {
+            "line": 16
+          }
+        }
+      },
+      "metadata": {
+        "cve": {
+          "ids": []
+        },
+        "cwe": "CWE-20",
+        "npmauditId": 550,
+        "title": "Denial of Service",
+        "vulnerableVersions": "<1.1.5 || >=2.0.0 <3.3.1",
+        "patchedVersions": ">= 1.1.5 <2.0.0 || >=3.3.1",
+        "currentVersion": "2.0.0",
+        "references": [
+          "- [GitHub Commit #c4fe466](https://github.com/websockets/ws/commit/c4fe46608acd61fbf7397eadc47378903f95b78a)\n"
+        ],
+        "severity": "high",
+        "solution": "Update to version 3.3.1 or later.",
+        "dependencyName": "ws"
+      }
+    },
+    {
+      "ruleId": "JSNPM0001",
+      "type": "sca",
+      "location": {
+        "path": "other-dir/package.json",
+        "positions": {
+          "begin": {
+            "line": 12
+          }
+        }
+      },
+      "metadata": {
+        "cve": {
+          "ids": []
+        },
+        "cwe": "CWE-79",
+        "npmauditId": 1324,
+        "title": "Arbitrary Code Execution",
+        "vulnerableVersions": "<3.0.8 || >=4.0.0 <4.5.3",
+        "patchedVersions": ">=3.0.8 <4.0.0 || >=4.5.3",
+        "currentVersion": "4.1.0",
+        "references": [],
+        "severity": "high",
+        "solution": "Upgrade to version 3.0.8, 4.5.3 or later.",
+        "dependencyName": "handlebars"
+      }
+    },
+    {
+      "ruleId": "JSNPM0001",
+      "type": "sca",
+      "location": {
+        "path": "other-dir/package.json",
+        "positions": {
+          "begin": {
+            "line": 0
+          }
+        }
+      },
+      "metadata": {
+        "cve": {
+          "ids": ["CVE-2019-10744"]
+        },
+        "cwe": "CWE-471",
+        "npmauditId": 1065,
+        "title": "Prototype Pollution",
+        "vulnerableVersions": "<4.17.12",
+        "patchedVersions": ">=4.17.12",
+        "currentVersion": "4.17.11",
+        "references": ["- [Snyk Advisory](https://snyk.io/vuln/SNYK-JS-LODASH-450202)"],
+        "severity": "high",
+        "solution": "Update to version 4.17.12 or later.",
+        "dependencyName": "lodash"
+      }
+    },
+    {
+      "ruleId": "JSNPM0001",
+      "type": "sca",
+      "location": {
+        "path": "other-dir/package.json",
+        "positions": {
+          "begin": {
+            "line": 15
+          }
+        }
+      },
+      "metadata": {
+        "cve": {
+          "ids": []
+        },
+        "cwe": "CWE-79",
+        "npmauditId": 1347,
+        "title": "Cross-Site Scripting",
+        "vulnerableVersions": "<0.14.0",
+        "patchedVersions": ">=0.14.0",
+        "currentVersion": "0.6.3",
+        "references": [
+          "- [Researcher blog post](http://danlec.com/blog/xss-via-a-spoofed-react-element)\n- [Snyk report](https://snyk.io/vuln/npm:react:20150318)"
+        ],
+        "severity": "high",
+        "solution": "Upgrade to version 0.14.0 or later.",
+        "dependencyName": "react"
+      }
+    },
+    {
+      "ruleId": "JSNPM0001",
+      "type": "sca",
+      "location": {
+        "path": "package.json",
+        "positions": {
+          "begin": {
+            "line": 17
+          }
+        }
+      },
+      "metadata": {
+        "cve": {
+          "ids": []
+        },
+        "cwe": "CWE-601",
+        "npmauditId": 830,
+        "title": "Open Redirect",
+        "vulnerableVersions": "<2.2.2 || >=3.0.0 <3.3.2 || >=4.0.0 <4.1.2",
+        "patchedVersions": ">=2.2.2 <3.0.0 || >=3.3.2 <4.0.0 || >=4.1.2",
+        "currentVersion": "1.3.1",
+        "references": [],
+        "severity": "high",
+        "solution": "If using `ecstatic` 4.x, upgrade to 4.1.2 or later.\nIf using `ecstatic` 3.x, upgrade to 3.3.2 or later.\nIf using `ecstatic` 2.x, upgrade to 2.2.2 or later.",
+        "dependencyName": "ecstatic"
+      }
+    },
+    {
+      "ruleId": "JSNPM0001",
+      "type": "sca",
+      "location": {
+        "path": "package.json",
+        "positions": {
+          "begin": {
+            "line": 14
+          }
+        }
+      },
+      "metadata": {
+        "cve": {
+          "ids": ["CVE-2017-16116"]
+        },
+        "cwe": "CWE-400",
+        "npmauditId": 536,
+        "title": "Regular Expression Denial of Service",
+        "vulnerableVersions": ">=0.0.0",
+        "patchedVersions": "<0.0.0",
+        "currentVersion": "3.3.3",
+        "references": ["- [Issue #212](https://github.com/jprichardson/string.js/issues/212)"],
+        "severity": "high",
+        "solution": "There is currently no direct patch for this vulnerability. \n\nCurrently, the best solution is to avoid passing user input to the `underscore` and `unescapeHTML` methods.\n\nAlternatively, a user provided patch is available in [Pull Request #217]( https://github.com/jprichardson/string.js/pull/217/commits/eab9511e4efbc8c521e18b6cf2e8565ae50c5a16), however this patch has not been tested, nor has it been merged by the package author.",
+        "dependencyName": "string"
+      }
+    },
+    {
+      "ruleId": "JSNPM0001",
+      "type": "sca",
+      "location": {
+        "path": "package.json",
+        "positions": {
+          "begin": {
+            "line": 16
+          }
+        }
+      },
+      "metadata": {
+        "cve": {
+          "ids": []
+        },
+        "cwe": "CWE-20",
+        "npmauditId": 550,
+        "title": "Denial of Service",
+        "vulnerableVersions": "<1.1.5 || >=2.0.0 <3.3.1",
+        "patchedVersions": ">= 1.1.5 <2.0.0 || >=3.3.1",
+        "currentVersion": "2.0.0",
+        "references": [
+          "- [GitHub Commit #c4fe466](https://github.com/websockets/ws/commit/c4fe46608acd61fbf7397eadc47378903f95b78a)\n"
+        ],
+        "severity": "high",
+        "solution": "Update to version 3.3.1 or later.",
+        "dependencyName": "ws"
+      }
+    },
+    {
+      "ruleId": "JSNPM0001",
+      "type": "sca",
+      "location": {
+        "path": "package.json",
+        "positions": {
+          "begin": {
+            "line": 12
+          }
+        }
+      },
+      "metadata": {
+        "cve": {
+          "ids": []
+        },
+        "cwe": "CWE-79",
+        "npmauditId": 1324,
+        "title": "Arbitrary Code Execution",
+        "vulnerableVersions": "<3.0.8 || >=4.0.0 <4.5.3",
+        "patchedVersions": ">=3.0.8 <4.0.0 || >=4.5.3",
+        "currentVersion": "4.0.11",
+        "references": [],
+        "severity": "high",
+        "solution": "Upgrade to version 3.0.8, 4.5.3 or later.",
+        "dependencyName": "handlebars"
+      }
+    },
+    {
+      "ruleId": "JSNPM0001",
+      "type": "sca",
+      "location": {
+        "path": "package.json",
+        "positions": {
+          "begin": {
+            "line": 15
+          }
+        }
+      },
+      "metadata": {
+        "cve": {
+          "ids": []
+        },
+        "cwe": "CWE-79",
+        "npmauditId": 1347,
+        "title": "Cross-Site Scripting",
+        "vulnerableVersions": "<0.14.0",
+        "patchedVersions": ">=0.14.0",
+        "currentVersion": "0.6.1",
+        "references": [
+          "- [Researcher blog post](http://danlec.com/blog/xss-via-a-spoofed-react-element)\n- [Snyk report](https://snyk.io/vuln/npm:react:20150318)"
+        ],
+        "severity": "high",
+        "solution": "Upgrade to version 0.14.0 or later.",
+        "dependencyName": "react"
+      }
+    }
+  ]
+}

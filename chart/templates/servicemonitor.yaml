@@ -1,0 +1,18 @@
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  name: worker-service-monitor
+spec:
+  jobLabel: worker-service-monitor
+  selector:
+    matchLabels:
+      app.kubernetes.io/instance: worker
+      app.kubernetes.io/name: worker
+  namespaceSelector:
+    matchNames:
+    - guardrailsio
+  endpoints:
+  - interval: 10s
+    path: /metrics
+    targetPort: 3000
+ 

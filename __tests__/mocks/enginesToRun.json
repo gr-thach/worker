@@ -1,0 +1,9 @@
+[
+  "general-detect-secrets",
+  "general-gr-secrets",
+  "general-ossindex",
+  "javascript-eslint",
+  "javascript-npm-audit",
+  "javascript-retirejs",
+  "javascript-nodejsscan"
+]

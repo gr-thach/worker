@@ -1,0 +1,31 @@
+resources:
+  requests:
+    cpu: 250m
+    memory: 512Mi
+  limits:
+    cpu: "2"
+    memory: 2Gi
+
+autoscaler:
+  minReplicas: 1
+  maxReplicas: 12
+  targetValue: 1.5
+  behavior:
+    scaleUp:
+      policies:
+        - type: Pods
+          value: 1
+          periodSeconds: 60
+    scaleDown:
+      policies:
+        - type: Pods
+          value: 1
+          periodSeconds: 180
+
+env:
+  - name: SENTRY_DSN
+    value: 'https://778db3e928d6479197dfbc2d37f1b56e@sentry.io/1190080'
+  - name: NEW_RELIC_APP_NAME
+    value: 'worker'
+  - name: NEW_RELIC_ENABLED
+    value: 'true'

@@ -1,0 +1,13 @@
+{
+  "idScan": "c04622f5-1dd5-4f2a-b995-d039bfedb9f7",
+  "name": "generate-and-save-report",
+  "config": {
+    "ignore": "blabla/**/*",
+    "bundles": "auto",
+    "report": {
+      "pullRequest": { "findings": "onAllFiles", "comment": true, "paranoid": false }
+    },
+    "notifications": { "slack": { "enabled": false } },
+    "ignoreFile": "blabla/**/*"
+  }
+}

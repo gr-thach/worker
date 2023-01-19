@@ -1,0 +1,69 @@
+const gqlEnumConstants = {
+  ACCOUNT_PROVIDER: {
+    GITHUB: 'GITHUB',
+    GITLAB: 'GITLAB',
+    BITBUCKET: 'BITBUCKET',
+    BITBUCKET_DATA_CENTER: 'BITBUCKET_DATA_CENTER'
+  },
+  ACCOUNT_TYPE: {
+    USER: 'USER',
+    ORGANIZATION: 'ORGANIZATION'
+  },
+  REPORT_STATUS: {
+    SUCCESS: 'SUCCESS',
+    ERROR: 'ERROR',
+    QUEUED: 'QUEUED',
+    SCANNING: 'SCANNING'
+  },
+  REPORT_TYPE: {
+    BRANCH: 'BRANCH',
+    PULL: 'PULL',
+    CLI: 'CLI'
+  },
+  SCAN_TYPE: {
+    BRANCH: 'BRANCH',
+    PULL: 'PULL',
+    CLI: 'CLI',
+    PRE_HOOK: 'PRE_HOOK'
+  },
+  REPOSITORY_PROVIDER: {
+    GITHUB: 'GITHUB',
+    GITLAB: 'GITLAB',
+    BITBUCKET: 'BITBUCKET',
+    BITBUCKET_DATA_CENTER: 'BITBUCKET_DATA_CENTER',
+    CLI: 'CLI'
+  },
+  SCAN_STATUS: {
+    QUEUED: 'queued',
+    SCANNING: 'scanning',
+    SUCCESS: 'success',
+    ERROR: 'error'
+  },
+  ENGINE_RUN_STATUS: {
+    QUEUED: 'queued',
+    RUNNING: 'running',
+    SUCCESS: 'success',
+    ERROR: 'error',
+    SKIP: 'skip'
+  },
+  SCAN_RESULT: {
+    PASS: 'pass',
+    FAIL: 'fail'
+  },
+  PLANS_CODES: {
+    GR_OPEN_SOURCE: 'GR_OPEN_SOURCE',
+    GR_INDIVIDUAL: 'GR_INDIVIDUAL',
+    GR_STARTUP: 'GR_STARTUP',
+    GR_BUSINESS: 'GR_BUSINESS',
+    FREE: 'FREE',
+    STANDARD: 'STANDARD',
+    PROFESSIONAL: 'PROFESSIONAL'
+  },
+  PLAN_FEATURES: {
+    LANG_EXCLUSIONS: 'LANG_EXCLUSIONS',
+    CUSTOM_CONFIG: 'CUSTOM_CONFIG',
+    CUSTOM_ENGINES: 'CUSTOM_ENGINES'
+  }
+};
+
+module.exports = gqlEnumConstants;
